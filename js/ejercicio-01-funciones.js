@@ -23,3 +23,12 @@
 // ===== TU CÓDIGO =====
 
 "use strict";
+
+function mostrarBienvenida(){
+    console.log("¡Bienvenido/a a DWEC!")
+    console.log("Hoy empezamos con las funciones.");
+}
+
+mostrarBienvenida();
+mostrarBienvenida();
+mostrarBienvenida();
