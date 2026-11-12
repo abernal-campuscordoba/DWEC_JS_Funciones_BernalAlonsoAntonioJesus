@@ -27,4 +27,24 @@
 
 // ===== TU CÓDIGO =====
 
+let duplicar = function (n) {
+  return n * 2;
+};
+
+let otra = duplicar;
+console.log(otra(4));
+
+function procesarLista(lista, callback) {
+  let resultado = [];
+  for (let i = 0; i < lista.length; i++) {
+    resultado.push(callback(lista[i]));
+  }
+  return resultado;
+}
+
+console.log(JSON.stringify(procesarLista([1, 2, 3], duplicar)));
+console.log(JSON.stringify(procesarLista([1, 2, 3], function (n) {
+  return "n" + n;
+})));
+
 

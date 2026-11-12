@@ -32,4 +32,22 @@
 
 // ===== TU CÓDIGO =====
 
+const sinDescuento = (precio) => precio;
+const descuentoVip = (precio) => precio * 0.8;
+const descuentoBlackFriday = (precio) => precio * 0.5;
+
+function calcularPrecioFinal(precio, estrategia) {
+  if (typeof estrategia !== "function") {
+    console.log("Estrategia no válida");
+    return undefined;
+  }
+
+  return estrategia(precio);
+}
+
+console.log(calcularPrecioFinal(200, sinDescuento));
+console.log(calcularPrecioFinal(200, descuentoVip));
+console.log(calcularPrecioFinal(200, descuentoBlackFriday));
+calcularPrecioFinal(200, "vip");
+
 

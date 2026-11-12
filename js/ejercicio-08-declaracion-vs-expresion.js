@@ -23,11 +23,19 @@
  */
 
 // ===== TU CÓDIGO =====
+function saludar(nombre) { console.log("Hola, " + nombre); }
+
 saludar("Ana");
+
+const despedir = function (nombre) {
+  console.log("Adiós, " + nombre);
+};
+
 despedir("Ana");
 
-function saludar(nombre) { console.log("Hola, " + nombre); }
-const despedir = function (nombre) { console.log("Adiós, " + nombre); };
-
-// a) ...
-// b) ...
+// a) La primera llamada funciona porque saludar es una declaración de función,
+//    que se crea al principio del ámbito antes de ejecutar el código.
+// b) Una declaración de función se crea durante la fase de inicialización del
+//    contexto de ejecución, antes de que se ejecute el script. En cambio, una
+//    expresión de función se crea solo cuando esa línea se ejecuta, es decir,
+//    después de asignarla a la constante.

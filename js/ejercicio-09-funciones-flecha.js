@@ -37,4 +37,21 @@
 
 // ===== TU CÓDIGO =====
 
+const sumar = (a, b) => a + b;
+const cuadrado = n => n * n;
+const saludar = () => "Hola";
+const describir = (nombre, edad) => {
+  const texto = nombre + " tiene " + edad + " años";
+  return texto.toUpperCase();
+};
+
+console.log(sumar(3, 4));
+console.log(cuadrado(5));
+console.log(saludar());
+console.log(describir("Ana", 20));
+
+const numeros = [1, 2, 3, 4, 5, 6];
+console.log(JSON.stringify(numeros.map(n => n * n)));
+console.log(JSON.stringify(numeros.filter(n => n % 2 === 0)));
+
 
